@@ -1,0 +1,191 @@
+<html>
+<body>
+<HEAD> 
+<TITLE>Feedback</TITLE>
+<LINK rel="Stylesheet" HREF="home.css">
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: hand;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+.container{
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  form{
+      background: white;
+      display: flex;
+      flex-direction: column;
+      padding: 2vw 4vw;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+  }
+  form h3{
+      color: black;
+      font-weight: 800;
+      margin-bottom: 20px;
+  }
+  form input, form textarea{
+      border: 0;
+      margin: 10px 0;
+      padding: 20px;
+      outline: none;
+      background: rgb(192, 187, 187);
+      font-size: 16px;
+  }
+  form button{
+    padding: 6px;
+    background: green;
+    color: whitesmoke;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+</style>
+</HEAD>
+<BODY>
+<div class="banner">
+                <div class="navbar">
+ <div class="dropdown">
+ 				<span>
+                    <img src="LOGO.PNG" class="logo"></span>
+  				<div class="dropdown-content">
+  					<p>Yash Chavan</p>
+ 					<p>Vaibhavi Ghute</p>
+ 					<p>Purva Jadhav</p>
+ 					<p>Dinesh Badgujar</p>
+  					<p>Rushikesh Khatke</p>
+ 					<p>Hariom Yande</p>
+ 					<p>Aditya Jadhav</p>
+ 					<p>Yash Narkar</p>
+ 					<p>Prathamesh Waydande</p>
+ 					<p>Tanishq Gupta</p>
+ 				 </div>
+			    </div>
+                    <ul>
+                        <li><a href="Home Page.html">Home</a></li>
+                        <li><a href="">
+			    <div class="dropdown">
+ 				<span>About Us</span>
+  				<div class="dropdown-content">
+  					<p><a href="Input Devices.html">Input Devices</p>
+ 					<p><a href="Output Devices.html">Output Devices</a></p>
+  					<p><a href="Troubleshooting.html">Troubleshooting</a></p>
+ 				 </div>
+			    </div>
+			</a></li>
+      <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+<br><HR size="6px" color="red"><br><br>
+<center>
+<!--<h1>HTML Forms</h1>
+
+<div>
+  <form action="Final.html">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+    <label for="lname">E-Mail</label>
+    <input type="text" id="lname" name="email" placeholder="Your Email.."><br>
+
+    <label for="lname">Remark</label>
+    <input type="text" id="lname" name="remark" placeholder="Remark.."><br>
+<br>  
+    <a href="https://mail.google.com"><input type="submit" value="Submit">
+  </form>
+</div>
+</center>-->
+
+
+<header class="major" id="contact">
+  <h1>Contact Form</h1>
+  </header>
+  <div class="container">
+  <form onsubmit="sendEmail(); reset(); return false;">
+  <h2 style="color: black;">GET IN TOUCH</h2>
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Email Id" required>
+  <input type="text" id="phone" placeholder="Phone No" required>
+  <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+  <button type="submit">Send</button>
+  </form>
+  </div>
+  <!--javascript enabled to receive data on email-->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+  function sendEmail(){
+  Email.send({
+  Host : "smtp.gmail.com",
+  Username : "errorbynight.chiragf@gmail.com",
+  Password : "auybnsfyramynyim",
+  To : 'errorbynight.chiragf@gmail.com',
+  From : document.getElementById("email").value,
+  Subject : "New Contact Form Enquiery",
+  Body : "Name: " + document.getElementById("name").value
+  + "<br> Email: " + document.getElementById("email").value
+  + "<br> Phone no: " + document.getElementById("phone").value
+  + "<br> Message: " + document.getElementById("message").value
+  }).then(
+  message => alert("Message Sent Successfully")
+  );
+  }
+  </script>
+</body>
+</html>
